@@ -1,0 +1,41 @@
+.link {
+  text-decoration: none;
+  font-family: Poppins;
+  font-size: 18px;
+
+  &--icon {
+    color: $red;
+
+    &:hover {
+      .font-icon {
+        background-color: $red;
+
+        &:before {
+          color: $white;
+        }
+      }
+    }
+
+    .font-icon {
+      height:30px;
+      width:30px;
+      border: 1px solid red;
+      display: inline-flex;
+      align-items: center;
+      transition: background-color .3s;
+      margin-left: 10px;
+      justify-content: center;
+      position: relative;
+      top:-2px;
+    }
+  }
+
+  &--icon-bottom{
+    .font-icon {
+      &:before {
+        font-size: 7px;
+        transform: rotate(90deg);
+      }
+    }
+  }
+}

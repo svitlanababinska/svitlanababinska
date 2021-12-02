@@ -1,0 +1,38 @@
+.goal {
+  padding-top: 65px;
+  padding-bottom: 71px;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 992px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    width: 23%;
+
+    @media only screen and (max-width: 992px) {
+      width: 48%;
+      margin-bottom: 30px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      width: 100%;
+    }
+  }
+
+  .heading {
+    margin-bottom: 57px;
+
+    &:before {
+      top: 17px;
+    }
+
+    h2 {
+      font-size: 30px;
+    }
+  }
+}

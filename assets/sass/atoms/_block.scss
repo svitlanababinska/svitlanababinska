@@ -1,0 +1,8 @@
+.block {
+  display: flex;
+  justify-content: center;
+
+  &.white {
+    background-color: $white;
+  }
+}

@@ -1,0 +1,28 @@
+.btn {
+  font-family: Poppins;
+  font-size: 18px;
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0 23px;
+  border-radius: 20px;
+  height: 40px;
+  display: block;
+  line-height: 40px;
+
+  &--border {
+    border: 1px solid $font-white;
+    color: $font-white;
+    transition: color .3s, border-color .3s;
+
+    &:hover {
+      border-color: $light-blue;
+      color: $light-blue;
+    }
+  }
+
+  &--blue {
+    border:none;
+    background-color: $light-blue;
+    color: $white;
+  }
+}

@@ -1,0 +1,45 @@
+.header {
+  &__inner {
+    display: flex;
+    padding: 22px 0px;
+
+    @media only screen and (max-width: 767px) {
+      align-items: center;
+      padding: 10px 0px;
+    }
+  }
+
+  &__logo {
+    img {
+      @media only screen and (max-width: 767px) {
+        width: 100px;
+      }
+    }
+  }
+
+  &__navigation {
+    width: calc(50% - 100px);
+
+    @media only screen and (max-width: 767px) {
+      width: calc(50% - 50px);
+    }
+  }
+
+  &__btn {
+    width: calc(50% - 100px);
+    display: flex;
+    justify-content: flex-end;
+
+    @media only screen and (max-width: 767px) {
+      width: calc(50% - 50px);
+    }
+  }
+
+  .btn {
+    @media only screen and (max-width: 767px) {
+      height: 30px;
+      padding: 5px 10px;
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.heading {
+  padding-left: 35px;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    height: 15px;
+    width: 15px;
+    background-color: $light-blue;
+    position: absolute;
+    left: 0px;
+    top: 22px;
+  }
+
+  h2 {
+    margin-bottom: 60px;
+  }
+}

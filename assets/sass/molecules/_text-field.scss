@@ -1,0 +1,18 @@
+.text-field {
+  input {
+    height: 50px;
+    border-radius: 25px;
+    font-size: 18px;
+    color: $black;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 0 30px;
+    width: calc(100% - 60px);
+
+    &::placeholder {
+      color: $black;
+    }
+  }
+}
