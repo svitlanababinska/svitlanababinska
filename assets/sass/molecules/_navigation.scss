@@ -5,11 +5,14 @@
     @media only screen and (max-width: 992px) {
       position: absolute;
       top: -2000px;
+      padding-top: 20px;
+      padding-bottom: 40px;
     }
 
     @media only screen and (max-width: 992px) {
       flex-direction: column;
-      background-color: $dark-blue;
+      background-color: $dark-blue2;
+      align-items: center;
     }
   }
 
@@ -48,50 +51,53 @@
     }
 
     @media only screen and (max-width: 992px) {
-      width: 100vw;
-      padding: 6px 15px;
+      width: calc(100vw - 30px);
+      padding: 19px 15px;
       text-align: center;
-      border-top: 1px solid $font-white;
     }
 
-    &:last-child {
+    &--mobile-only {
+      display: none;
+
       @media only screen and (max-width: 992px) {
-        border-bottom: 1px solid $font-white;
+        display: inline-block;
       }
     }
   }
 
   &__toggler {
     display: none;
+    height: 40px;
+    width: 40px;
+    border: 1px solid $white;
+    background-color: transparent;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 15px;
 
     @media only screen and (max-width: 992px) {
+      display: flex;
+    }
+
+    &__line {
+      width: 17px;
+      height: 1px;
+      margin-bottom: 6px;
+      background-color: $white;
       display: block;
-    }
 
-    &__text {
-      display: inline;
-    }
-
-    &__close {
-      display: none;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
   &.active {
     .nav__items {
       @media only screen and (max-width: 992px) {
-        top: 60px;
+        top: 80px;
         left: 0;
-      }
-    }
-
-    .nav__toggler {
-      &__text {
-        display: none;
-      }
-
-      &__close {
-        display: inline;
       }
     }
   }

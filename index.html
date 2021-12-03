@@ -13,14 +13,16 @@
     <div class="container">
         <div class="header__inner">
             <nav class="header__navigation nav">
-                <button class="nav__toggler btn btn--border">
-                    <span class="nav__toggler__text">Menu</span>
-                    <span class="nav__toggler__close">Close</span>
+                <button class="nav__toggler">
+                    <sman class="nav__toggler__line"></sman>
+                    <sman class="nav__toggler__line"></sman>
+                    <sman class="nav__toggler__line"></sman>
                 </button>
                 <div class="nav__items">
                     <a href="#about" class="nav__item">About the project</a>
                     <a href="#partners" class="nav__item">Partners</a>
                     <a href="#goal" class="nav__item">Our goal</a>
+                    <a href="#contact" class="btn btn--border nav__item--mobile-only">Contact</a>
                 </div>
             </nav>
             <div class="header__logo">
@@ -230,7 +232,7 @@
         <div class="heading">
             <h2>Contact us</h2>
         </div>
-        <form method="post" class="contact__form" action="https://formspree.io/f/xzbopwey">
+        <form method="POST" class="contact__form" action="https://formspree.io/f/xzbopwey">
             <div class="contact__form-item">
                 <label for="">Hi! I am</label>
                 <div class="text-field">
@@ -279,6 +281,17 @@
             }
             else {
                 $("header .nav").addClass('active');
+            }
+        });
+
+
+        $(document).scroll(function(){
+            if($(this).scrollTop() > 2)
+            {
+                $('.header').addClass('sticky');
+            }
+            else{
+                $('.header').removeClass('sticky');
             }
         });
     });

@@ -1,18 +1,34 @@
 .header {
+  position: sticky;
+  top:0;
+  transition: background-color .3s;
+
+  @media only screen and (max-width: 992px) {
+    background-color: $dark-blue;
+  }
+
   &__inner {
     display: flex;
     padding: 22px 0px;
 
+    @media only screen and (max-width: 992px) {
+      justify-content: space-between;
+      padding: 20px 0px;
+    }
+
     @media only screen and (max-width: 767px) {
       align-items: center;
-      padding: 10px 0px;
     }
   }
 
   &__logo {
+    @media only screen and (max-width: 992px) {
+      order: 1;
+    }
+
     img {
-      @media only screen and (max-width: 767px) {
-        width: 100px;
+      @media only screen and (max-width: 992px) {
+        width: 160px;
       }
     }
   }
@@ -20,8 +36,9 @@
   &__navigation {
     width: calc(50% - 100px);
 
-    @media only screen and (max-width: 767px) {
-      width: calc(50% - 50px);
+    @media only screen and (max-width: 992px) {
+      width: auto;
+      order: 2;
     }
   }
 
@@ -30,16 +47,23 @@
     display: flex;
     justify-content: flex-end;
 
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 992px) {
       width: calc(50% - 50px);
+      display: none;
     }
   }
 
   .btn {
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 992px) {
       height: 30px;
-      padding: 5px 10px;
-      font-size: 12px;
+      line-height: 30px;
+      margin-top: 19px;
+      padding: 5px 30px;
+      margin-top: 19px;
     }
+  }
+
+  &.sticky {
+    background-color: $dark-blue;
   }
 }
